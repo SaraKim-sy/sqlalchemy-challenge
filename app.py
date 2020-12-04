@@ -159,7 +159,7 @@ def temp_by_start_date(start):
     if date_out_of_range == False:
         return jsonify(temp_data)
     
-    # Return the error message if there is no date found in the date range given
+    # Return the error message if there is no data found in the date range given
     else:
         return jsonify({'error': f'No temperature data found. Date is out of range. Please edit the start date.'}, 404)
     
@@ -193,7 +193,7 @@ def temp_by_start_end_date(start, end):
     if date_out_of_range == False:
         return jsonify(temp_data)
     
-    # Return the error message if there is no date found in the date range given
+    # Return the error message if there is no data found in the date range given
     else:
         return jsonify({'error': f'No temperature data found. Date is out of range. Please edit the date range.'}, 404)
 
