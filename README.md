@@ -1,4 +1,5 @@
 # SQLAlchemy - Surfs Up!
+![surf](./Images/surfs-up.png)
 
 ## Table of contents
   * [Introduction](#introduction)
@@ -43,7 +44,7 @@ All of the following analysis was completed using SQLAlchemy ORM queries, Pandas
 ![precipitation](./Images/Precipitation_in_Hawaii,_2016-08-23-2017-08-23.png)
   
 * Pandas was used to print the summary statistics for the precipitation data.
-
+![describe](./Images/describe.png)
 
 ### <a name="station"></a> Station Analysis
 
@@ -120,9 +121,12 @@ The routes were built by using Flask. The available routes in the app and descri
 
 * The rainfall per weather station was calculated using the previous year's matching dates.
 
-* The daily normals were calculated. Normals are the averages for the min, avg, and max temperatures.
+![daily-rainfall-avg](./Images/daily_rainfall_avg_df.PNG)
+
 
 ### <a name="daily-temp"></a>Daily Temperature Average
+
+* The daily normals were calculated. Normals are the averages for the min, avg, and max temperatures.
 
 * A function called `daily_normals`  will calculate the daily normals for a specific date. This date string will be in the format `%m-%d`. All historic TOBS that match the date string were used.
 
