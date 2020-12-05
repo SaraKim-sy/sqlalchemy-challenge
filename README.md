@@ -1,7 +1,5 @@
 # SQLAlchemy-Surfs Up!
 
-Congratulations! You've decided to treat yourself to a long holiday vacation in Honolulu, Hawaii! To help with your trip planning, you need to do some climate analysis on the area. The following outlines what you need to do.
-
 ## Table of contents
   * [Introduction](#introduction)
   * [Climate Analysis and Exploration](#climate-analysis)
@@ -16,33 +14,35 @@ Congratulations! You've decided to treat yourself to a long holiday vacation in 
   * [Technologies](#technologies)
   
 ## <a name="introduction"></a> Introduction
+This repository was created to help with trip planning in Honolulu, Hawaii, with some climate analysis on the area. There will be a climate analysis inluding precipitation analysis, station analysis. Also, a Flask API will be available. Lastly, other analyses including temperature anlaysis, daily rainfall average, daily temperature analysis, and temperature anlaysis comparing between June and December are available as well. 
 
 ## <a name="climate-analysis"></a>Step 1 - Climate Analysis and Exploration
-To begin, use Python and SQLAlchemy to do basic climate analysis and data exploration of your climate database. All of the following analysis should be completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
+The notebook displays the whole analysis is available in this link: [Analysis Notebook](https://nbviewer.jupyter.org/github/SaraKim-sy/sqlalchemy-challenge/blob/main/.ipynb_checkpoints/climate-checkpoint.ipynb)
 
-* Use the provided [starter notebook](climate_starter.ipynb) and [hawaii.sqlite](Resources/hawaii.sqlite) files to complete your climate analysis and data exploration.
+To begin, Python and SQLAlchemy were used to do basic climate analysis and data exploration of the climate database. 
+All of the following analysis was completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
 
-* Choose a start date and end date for your trip. Make sure that your vacation range is approximately 3-15 days total.
+* [hawaii.sqlite](Resources/hawaii.sqlite) file was used to complete the climate analysis and data exploration.
 
-* Use SQLAlchemy `create_engine` to connect to your sqlite database.
+* SQLAlchemy `create_engine` was used to connect to the sqlite database.
 
-* Use SQLAlchemy `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
+* USQLAlchemy `automap_base()` was used to reflect the tables into classes and a reference to those classes called `Station` and `Measurement` was saved.
 
 ### <a name="precipitation"></a> Precipitation Analysis
 
-* Design a query to retrieve the last 12 months of precipitation data.
+* A query was designed to retrieve the last 12 months of precipitation data.
 
-* Select only the `date` and `prcp` values.
+* Only the `date` and `prcp` values were selected.
 
-* Load the query results into a Pandas DataFrame and set the index to the date column.
+* Query results were loaded into a Pandas DataFrame and the index was set to the date column.
 
-* Sort the DataFrame values by `date`.
+* The DataFrame values were sorted by `date`.
 
-* Plot the results using the DataFrame `plot` method.
+* The results was plotted using the DataFrame `plot` method. The created plot is the following:
 
 ![precipitation](./Images/Precipitation_in_Hawaii,_2016-08-23-2017-08-23.png)
   
-* Use Pandas to print the summary statistics for the precipitation data.
+* Pandas was used to print the summary statistics for the precipitation data.
 
 
 ### <a name="station"></a> Station Analysis
