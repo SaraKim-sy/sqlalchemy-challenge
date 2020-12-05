@@ -136,7 +136,7 @@ The routes were built by using Flask. The available routes in the app and descri
  
 ### <a name="t-test"></a>Temperature Analysis / t-test
  
-* Hawaii is reputed to enjoy mild weather all year. This analysis is to see if there a meaningful difference between the temperature in, for example, June and December.
+* Hawaii is reputed to enjoy mild weather all year. This analysis is to see if there is a meaningful difference between the temperature in, for example, June and December.
 
 * SQLAlchemy was used to perform this portion.
 
@@ -146,7 +146,7 @@ The routes were built by using Flask. The available routes in the app and descri
 In this case, comparing the means between the average temperature in June and December at the same places in Hawaii, ** a paired t-test** is more suitable to use as it is to compare the same places' temperatures at different times.
   
 ## <a name="technologies"></a> Technologies
-Project is created with:
+This repository was created with:
 * SQLAlchemy
 * Python 3.8
 * Jupyter Notebook
