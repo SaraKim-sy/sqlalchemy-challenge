@@ -44,7 +44,7 @@ All of the following analysis was completed using SQLAlchemy ORM queries, Pandas
 ![precipitation](./Images/Precipitation_in_Hawaii,_2016-08-23-2017-08-23.png)
   
 * Pandas was used to print the summary statistics for the precipitation data.
-![describe](./Images/describe.png)
+![describe](./Images/describe.PNG)
 
 ### <a name="station"></a> Station Analysis
 
