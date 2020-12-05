@@ -130,7 +130,7 @@ The routes were built by using Flask. The available routes in the app and descri
 
 * The list of daily normals was loaded into a Pandas DataFrame and set the index equal to the date.
 
-* Use Pandas to plot an area plot (`stacked=False`) for the daily normals. The created plot is the following:
+* Pandas was used to plot an area plot (`stacked=False`) for the daily normals. The created plot is the following:
 
   ![daily-normals](./Images/Daily_Normals_area_plot.png)
  
