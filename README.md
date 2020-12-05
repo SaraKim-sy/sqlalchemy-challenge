@@ -14,7 +14,7 @@
   * [Technologies](#technologies)
   
 ## <a name="introduction"></a> Introduction
-This repository was created to help with trip planning in Honolulu, Hawaii, with some climate analysis on the area. There will be a climate analysis inluding precipitation analysis, station analysis. Also, a Flask API will be available. Lastly, other analyses including temperature anlaysis, daily rainfall average, daily temperature analysis, and temperature anlaysis comparing between June and December are available as well. 
+This repository was created to help with trip planning in Honolulu, Hawaii, with some climate analysis on the area. There will be a climate analysis, including precipitation analysis, station analysis. Also, a Flask API will be available. Lastly, other analyses, including temperature analysis, daily rainfall average, daily temperature analysis, and temperature analysis comparing between June and December, are available as well. 
 
 ## <a name="climate-analysis"></a>Step 1 - Climate Analysis and Exploration
 The notebook displays the whole analysis is available in this link: [Analysis Notebook](climate.ipynb)
@@ -26,7 +26,7 @@ All of the following analysis was completed using SQLAlchemy ORM queries, Pandas
 
 * SQLAlchemy `create_engine` was used to connect to the sqlite database.
 
-* USQLAlchemy `automap_base()` was used to reflect the tables into classes and a reference to those classes called `Station` and `Measurement` was saved.
+* USQLAlchemy `automap_base()` was used to reflect the tables into classes, and a reference to those classes called `Station` and `Measurement` was saved.
 
 ### <a name="precipitation"></a> Precipitation Analysis
 
@@ -34,11 +34,11 @@ All of the following analysis was completed using SQLAlchemy ORM queries, Pandas
 
 * Only the `date` and `prcp` values were selected.
 
-* Query results were loaded into a Pandas DataFrame and the index was set to the date column.
+* Query results were loaded into a Pandas DataFrame, and the index was set to the date column.
 
 * The DataFrame values were sorted by `date`.
 
-* The results was plotted using the DataFrame `plot` method. The created plot is the following:
+* The results were plotted using the DataFrame `plot` method. The created plot is the following:
 
 ![precipitation](./Images/Precipitation_in_Hawaii,_2016-08-23-2017-08-23.png)
   
@@ -48,11 +48,11 @@ All of the following analysis was completed using SQLAlchemy ORM queries, Pandas
 ### <a name="station"></a> Station Analysis
 
 * A query was designed to calculate the total number of stations and to find the most active stations.
-  * The stations and observation counts were listed in descending order to find the most active stations and the station has highest number of observations using `func.min`, `func.max`, `func.avg`, and `func.count` in the queries.
+  * The stations and observation counts were listed in descending order to find the most active stations, and the station has the highest number of observations using `func.min`, `func.max`, `func.avg`, and `func.count` in the queries.
 
-* A query was to retrieve the last 12 months of temperature observation data (TOBS) and the data was filtered by the station with the highest number of observations.
+* A query was to retrieve the last 12 months of temperature observation data (TOBS), and the data were filtered by the station with the highest number of observations.
 
-  * The results was plotted as a histogram with `bins=12`. The created plot is the following:
+  * The results were plotted as a histogram with `bins=12`. The created plot is the following:
 
     ![station-histogram](./Images/Histogram_of_Temperature_Observations_for_Station_USC00519281_2016-08-23_2017-08-23.png)
 
@@ -70,7 +70,7 @@ The routes were built by using Flask. The available routes in the app and descri
 
   * Home page.
 
-  * Lists all routes that are available.
+  * Lists all available routes.
 
 * `/api/v1.0/precipitation`
 
@@ -91,9 +91,9 @@ The routes were built by using Flask. The available routes in the app and descri
 
   * Returns a JSON list of the minimum temperature, the average temperature, and the max temperature for a given start or start-end range.
 
-  * When given the start only, calculates `TMIN`, `TAVG`, and `TMAX` for all dates greater than and equal to the start date.
+  * When given the start only, it calculates `TMIN`, `TAVG`, and `TMAX` for all dates greater than and equal to the start date.
 
-  * When given the start and the end date, calculates the `TMIN`, `TAVG`, and `TMAX` for dates between the start and end date inclusive.
+  * When given the start and the end date, it calculates the `TMIN`, `TAVG`, and `TMAX` for dates between the start and end date inclusive.
 
 - - -
 
@@ -120,13 +120,13 @@ The routes were built by using Flask. The available routes in the app and descri
 
 * The rainfall per weather station was calculated using the previous year's matching dates.
 
-* The daily normals was calculated. Normals are the averages for the min, avg, and max temperatures.
+* The daily normals were calculated. Normals are the averages for the min, avg, and max temperatures.
 
 ### <a name="daily-temp"></a>Daily Temperature Average
 
-* A function called `daily_normals`  will calculate the daily normals for a specific date. This date string will be in the format `%m-%d`. All historic TOBS that match that date string were used.
+* A function called `daily_normals`  will calculate the daily normals for a specific date. This date string will be in the format `%m-%d`. All historic TOBS that match the date string were used.
 
-* A list of dates for your trip in the format `%m-%d` was created. The `daily_normals` function was used to calculate the normals for each date string and the results were appended to a list.
+* A list of dates for your trip in the format `%m-%d` was created. The `daily_normals` function was used to calculate the normals for each date string, and the results were appended to a list.
 
 * The list of daily normals was loaded into a Pandas DataFrame and set the index equal to the date.
 
@@ -142,8 +142,8 @@ The routes were built by using Flask. The available routes in the app and descri
 
 * The average temperatures in June and December were identified at all stations across all available years in the dataset.
 
-* A t-test used to determine whether the difference in the means is statistically significant. The t-test is used to test the difference between means to determine if there is a significant difference between the two groups. A paired t-test compares the means of the related groups, and an unpaired t-test compares the means of different groups. A paired t-test is designed to compare the means of the same group or item under two separate scenarios. An unpaired t-test compares the means of two independent or unrelated groups.
-In this case, comparing the means between the average temperature in June and December at the same places in Hawaii, **an paired t-test** is more suitable to use as it is to compare the same places' temperatures at different times.
+* A t-test is used to determine whether the difference in the means is statistically significant. The t-test is used to test the difference between means to determine if there is a significant difference between the two groups. A paired t-test compares the means of the related groups, and an unpaired t-test compares the means of different groups. A paired t-test is designed to compare the means of the same group or item in two separate scenarios. An unpaired t-test compares the means of two independent or unrelated groups.
+In this case, comparing the means between the average temperature in June and December at the same places in Hawaii, ** a paired t-test** is more suitable to use as it is to compare the same places' temperatures at different times.
   
 ## <a name="technologies"></a> Technologies
 Project is created with:
