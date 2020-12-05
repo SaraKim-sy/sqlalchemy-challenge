@@ -115,16 +115,6 @@ Now that you have completed your initial analysis, design a Flask API based on t
 
 ### <a name="temperature"></a>Temperature Analysis
 
-* Hawaii is reputed to enjoy mild weather all year. Is there a meaningful difference between the temperature in, for example, June and December?
-
-* You may either use SQLAlchemy or pandas's `read_csv()` to perform this portion.
-
-* Identify the average temperature in June at all stations across all available years in the dataset. Do the same for December temperature.
-
-* Use the t-test to determine whether the difference in the means, if any, is statistically significant. Will you use a paired t-test, or an unpaired t-test? Why?
-
-### Temperature Analysis II
-
 * The starter notebook contains a function called `calc_temps` that will accept a start date and end date in the format `%Y-%m-%d`. The function will return the minimum, average, and maximum temperatures for that range of dates.
 
 * Use the `calc_temps` function to calculate the min, avg, and max temperatures for your trip using the matching dates from the previous year (i.e., use "2017-01-01" if your trip start date was "2018-01-01").
@@ -155,7 +145,15 @@ Now that you have completed your initial analysis, design a Flask API based on t
 
   ![daily-normals](./Images/Daily_Normals_area_plot.png)
  
- ### <a name="t-test"></a>Temperature Analysis / t-test
+### <a name="t-test"></a>Temperature Analysis / t-test
+ 
+* Hawaii is reputed to enjoy mild weather all year. Is there a meaningful difference between the temperature in, for example, June and December?
+
+* You may either use SQLAlchemy or pandas's `read_csv()` to perform this portion.
+
+* Identify the average temperature in June at all stations across all available years in the dataset. Do the same for December temperature.
+
+* Use the t-test to determine whether the difference in the means, if any, is statistically significant. Will you use a paired t-test, or an unpaired t-test? Why?
   
 ## <a name="technologies"></a> Technologies
 Project is created with:
