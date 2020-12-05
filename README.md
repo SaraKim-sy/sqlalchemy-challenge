@@ -2,8 +2,22 @@
 
 Congratulations! You've decided to treat yourself to a long holiday vacation in Honolulu, Hawaii! To help with your trip planning, you need to do some climate analysis on the area. The following outlines what you need to do.
 
-## Step 1 - Climate Analysis and Exploration
+## Table of contents
+  * [Introduction](#introduction)
+  * [Climate Analysis and Exploration](#climate-analysis)
+     * [Precipitation Anlaysis](#precipitation)
+     * [Station Analysis](#station)
+  * [Climate App](#climate-app)
+  * [Other Analyses](#other-analyses)
+      * [Temperature Analysis](#temperature)
+      * [Daily Rainfall Average](#rainfall)
+      * [Daily Temperature Average](#daily-temp)
+      * [Temperature Analysis / t-test](#t-test)
+  * [Technologies](#technologies)
+  
+## <a name="introduction"></a> Introduction
 
+## <a name="climate-analysis"></a>Step 1 - Climate Analysis and Exploration
 To begin, use Python and SQLAlchemy to do basic climate analysis and data exploration of your climate database. All of the following analysis should be completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
 
 * Use the provided [starter notebook](climate_starter.ipynb) and [hawaii.sqlite](Resources/hawaii.sqlite) files to complete your climate analysis and data exploration.
@@ -14,7 +28,7 @@ To begin, use Python and SQLAlchemy to do basic climate analysis and data explor
 
 * Use SQLAlchemy `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
 
-### Precipitation Analysis
+### <a name="precipitation"></a> Precipitation Analysis
 
 * Design a query to retrieve the last 12 months of precipitation data.
 
@@ -26,11 +40,12 @@ To begin, use Python and SQLAlchemy to do basic climate analysis and data explor
 
 * Plot the results using the DataFrame `plot` method.
 
-  ![precipitation](Images/precipitation.png)
-
+![precipitation](./Images/Precipitation_in_Hawaii,_2016-08-23-2017-08-23.png)
+  
 * Use Pandas to print the summary statistics for the precipitation data.
 
-### Station Analysis
+
+### <a name="station"></a> Station Analysis
 
 * Design a query to calculate the total number of stations.
 
@@ -48,11 +63,11 @@ To begin, use Python and SQLAlchemy to do basic climate analysis and data explor
 
   * Plot the results as a histogram with `bins=12`.
 
-    ![station-histogram](Images/station-histogram.png)
+    ![station-histogram](./Images/Histogram_of_Temperature_Observations_for_Station_USC00519281_2016-08-23_2017-08-23.png)
 
 - - -
 
-## Step 2 - Climate App
+## <a name="climate-app"></a>Step 2 - Climate App
 
 Now that you have completed your initial analysis, design a Flask API based on the queries that you have just developed.
 
@@ -91,11 +106,14 @@ Now that you have completed your initial analysis, design a Flask API based on t
 
 - - -
 
-## Bonus: Other Recommended Analyses
-
+## <a name="other-analyses"></a>Other Analyses
+      * Temperature Analysis(#temperature)
+      * Daily Rainfall Average(#rainfall)
+      * Daily Temperature Average(#daily-temp)
+      * Temperature Analysis / t-test(#t-test)
 * The following are optional challenge queries. These are highly recommended to attempt, but not required for the homework.
 
-### Temperature Analysis I
+### <a name="temperature"></a>Temperature Analysis
 
 * Hawaii is reputed to enjoy mild weather all year. Is there a meaningful difference between the temperature in, for example, June and December?
 
@@ -117,13 +135,15 @@ Now that you have completed your initial analysis, design a Flask API based on t
 
   * Use the peak-to-peak (TMAX-TMIN) value as the y error bar (YERR).
 
-    ![temperature](Images/temperature.png)
+    ![temperature](./Images/trip_avg_temp.png)
 
-### Daily Rainfall Average
+### <a name="rainfall"></a>Daily Rainfall Average
 
 * Calculate the rainfall per weather station using the previous year's matching dates.
 
 * Calculate the daily normals. Normals are the averages for the min, avg, and max temperatures.
+
+### <a name="daily-temp"></a>Daily Temperature Average
 
 * You are provided with a function called `daily_normals` that will calculate the daily normals for a specific date. This date string will be in the format `%m-%d`. Be sure to use all historic TOBS that match that date string.
 
@@ -133,5 +153,17 @@ Now that you have completed your initial analysis, design a Flask API based on t
 
 * Use Pandas to plot an area plot (`stacked=False`) for the daily normals.
 
-  ![daily-normals](Images/daily-normals.png)
+  ![daily-normals](./Images/Daily_Normals_area_plot.png)
+ 
+ ### <a name="t-test"></a>Temperature Analysis / t-test
+  
+## <a name="technologies"></a> Technologies
+Project is created with:
+* SQLAlchemy
+* Python 3.8
+* Jupyter Notebook
+* Flask
+* Matplotlib
+* Pandas
+* datetime
 
