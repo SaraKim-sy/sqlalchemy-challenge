@@ -77,14 +77,20 @@ def stations():
     session = Session(engine)  
 
     # Perform a query to retrieve the stations data
-    results = session.query(Station.station).all()
+    station_results = session.query(Station.station, Station.name).all()
     session.close()
 
     # Convert the query results to a list
-    stations = [result[0] for result in results]
+    stations_list = []
+    
+    for station, name in station_results:
+        stations_dict = {}
+        stations_dict['station'] = station
+        stations_dict['name'] = name
+        stations_list.append(stations_dict)
 
-    # Return jsonified data
-    return jsonify(stations)
+    # Return the JSON representation of the list
+    return jsonify(stations_list)
 
 
 """Query the dates and temperature observations of the most active station for the last year of data
