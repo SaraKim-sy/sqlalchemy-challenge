@@ -143,7 +143,12 @@ The routes were built by using Flask. The available routes in the app and descri
 * The average temperatures in June and December were identified at all stations across all available years in the dataset.
 
 * A t-test is used to determine whether the difference in the means is statistically significant. The t-test is used to test the difference between means to determine if there is a significant difference between the two groups. A paired t-test compares the means of the related groups, and an unpaired t-test compares the means of different groups. A paired t-test is designed to compare the means of the same group or item in two separate scenarios. An unpaired t-test compares the means of two independent or unrelated groups.
-In this case, comparing the means between the average temperature in June and December at the same places in Hawaii, ** a paired t-test** is more suitable to use as it is to compare the same places' temperatures at different times.
+In this case, comparing the means between the average temperature in June and December at the same places in Hawaii, **a paired t-test** is more suitable to use as it is to compare the same places' temperatures at different times.
+
+* t-test results
+  * With the result, t-statistic value is 34.698, and the p-value is less than 0.05, the null hypothesis is rejected.
+  * There is a significant difference between the two population means (the temperature in June and December).
+  * This difference is unlikely to be caused by sampling error or chance.
   
 ## <a name="technologies"></a> Technologies
 This repository was created with:
