@@ -17,7 +17,7 @@
 This repository was created to help with trip planning in Honolulu, Hawaii, with some climate analysis on the area. There will be a climate analysis inluding precipitation analysis, station analysis. Also, a Flask API will be available. Lastly, other analyses including temperature anlaysis, daily rainfall average, daily temperature analysis, and temperature anlaysis comparing between June and December are available as well. 
 
 ## <a name="climate-analysis"></a>Step 1 - Climate Analysis and Exploration
-The notebook displays the whole analysis is available in this link: [Analysis Notebook](https://nbviewer.jupyter.org/github/SaraKim-sy/sqlalchemy-challenge/blob/main/.ipynb_checkpoints/climate-checkpoint.ipynb)
+The notebook displays the whole analysis is available in this link: [Analysis Notebook](climate.ipynb)
 
 To begin, Python and SQLAlchemy were used to do basic climate analysis and data exploration of the climate database. 
 All of the following analysis was completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
