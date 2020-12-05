@@ -41,10 +41,11 @@ All of the following analysis was completed using SQLAlchemy ORM queries, Pandas
 
 * The results were plotted using the DataFrame `plot` method. The created plot is the following:
 
-![precipitation](./Images/Precipitation_in_Hawaii,_2016-08-23-2017-08-23.png)
+![precipitation](./Images/Precipitation_in_Hawaii,_2016-08-23-2017-08-23.png)<br>
   
 * Pandas was used to print the summary statistics for the precipitation data.
-![describe](./Images/describe.PNG)
+
+![describe](./Images/describe.PNG)<br>
 
 ### <a name="station"></a> Station Analysis
 
